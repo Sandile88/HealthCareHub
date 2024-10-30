@@ -45,6 +45,20 @@ public class PatientController {
     }
 
 
+    @RequestMapping(method=RequestMethod.POST)
+    public ResponseEntity<Patient> addPatient(@RequestBody Patient patient) {
+        return new ResponseEntity<>(patientSvc.addPatient(patient), HttpStatus.CREATED);
+    }
+
+
+    @RequestMapping(value = "/{id}", method=RequestMethod.PUT,
+    produces = "application/json")
+    public ResponseEntity<Patient> editPatientDetails(@PathVariable Long id, @RequestBody Patient patient) {
+        return new ResponseEntity<>(patientSvc.editPatientDetails(id, patient), HttpStatus.OK);
+    }
+    
+
+
     public ResponseEntity<Patient> checkNullInputs(Patient patient) {
         if (patient != null) {
             return new ResponseEntity<>(patient, HttpStatus.OK);

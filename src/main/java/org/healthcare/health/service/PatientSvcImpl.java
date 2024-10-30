@@ -51,5 +51,23 @@ public class PatientSvcImpl implements PatientSvc {
         }
        }
 
+
+        
+      @Override
+      public Patient addPatient(Patient patient) {
+          return patientRepository.save(patient);
+      }
+  
+      @Override
+      public Patient editPatientDetails(Long id, Patient patient) {
+          if (patientRepository.existsById(id)) {
+              patient.setId(id);
+              return patientRepository.save(patient);
+          } else {
+            throw new RuntimeException("Customer with id: " + id + " could not be found");
+          }
+      } 
+      
+
   
 }
