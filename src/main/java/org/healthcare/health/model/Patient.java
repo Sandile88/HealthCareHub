@@ -168,26 +168,4 @@ public class Patient {
         this.allergies = allergies;
     }
 
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
 }

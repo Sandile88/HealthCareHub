@@ -8,8 +8,6 @@ public interface PatientSvc {
 
     Patient findByEmail(String email);
 
-    Patient addPatient(Patient patient);
-
-    Patient editPatientDetails(Long id, Patient Patient);
+  
     
 }
