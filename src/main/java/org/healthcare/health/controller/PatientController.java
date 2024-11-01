@@ -49,8 +49,9 @@ public class PatientController {
     }
 
 
-    @RequestMapping(method=RequestMethod.POST)
+    @RequestMapping(method=RequestMethod.POST, produces = {"application/json"})
     public ResponseEntity<Patient> addPatient(@RequestBody Patient patient) {
+        System.out.println("hereee");
         return new ResponseEntity<>(patientSvc.addPatient(patient), HttpStatus.CREATED);
     }
 
