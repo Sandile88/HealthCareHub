@@ -1,7 +1,7 @@
 package org.healthcare.health.model;
 
 import java.time.LocalDateTime;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 // import com.fasterxml.jackson.annotation.JsonFormat;
 // import com.fasterxml.jackson.annotation.JsonProperty;

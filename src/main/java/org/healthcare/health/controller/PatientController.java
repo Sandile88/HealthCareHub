@@ -32,6 +32,8 @@ public class PatientController {
     public ResponseEntity<Patient> findByPatientId(@PathVariable("id") Long id) {
 
         Patient patient = patientSvc.findByPatientId(id);
+        System.out.println("idddd");
+
         return checkNullInputs(patient);
     }
 
@@ -41,6 +43,8 @@ public class PatientController {
     public ResponseEntity<Patient> findByEmail(@PathVariable("email") String email) {
 
         Patient patient = patientSvc.findByEmail(email);
+        System.out.println("emaillll");
+
         return checkNullInputs(patient);
     }
 

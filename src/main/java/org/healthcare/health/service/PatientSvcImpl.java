@@ -17,7 +17,7 @@ public class PatientSvcImpl implements PatientSvc {
 
     @Override
     public Patient findByPatientId(Long id) {
-        logger.info("search for customer with id {}", id);
+        logger.info("search for patient with id {}", id);
         try {
             Patient patient = patientRepository.findByPatientId(id);
             if (patient != null) {
@@ -26,7 +26,7 @@ public class PatientSvcImpl implements PatientSvc {
             return patient;
             
         } catch (Exception e) {
-            String message = "Error while searching for customer with id " + id
+            String message = "Error while searching for patient with id " + id
             + e.getMessage();
             logger.error(message, e);
             throw new RuntimeException(message, e);
@@ -35,7 +35,7 @@ public class PatientSvcImpl implements PatientSvc {
 
     @Override
     public Patient findByEmail(String email) {
-        logger.info("search for customer with email {}", email);
+        logger.info("search for patient with email {}", email);
         try {
             Patient patient = patientRepository.findByEmail(email);
             if (patient != null) {
@@ -44,7 +44,7 @@ public class PatientSvcImpl implements PatientSvc {
             return patient;
             
         } catch (Exception e) {
-            String message = "Error while searching for customer with email " + email
+            String message = "Error while searching for patient with email " + email
             + e.getMessage();
             logger.error(message, e);
             throw new RuntimeException(message, e);
@@ -64,7 +64,7 @@ public class PatientSvcImpl implements PatientSvc {
               patient.setId(id);
               return patientRepository.save(patient);
           } else {
-            throw new RuntimeException("Customer with id: " + id + " could not be found");
+            throw new RuntimeException("Patient with id: " + id + " could not be found");
           }
       } 
       
