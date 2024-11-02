@@ -13,6 +13,8 @@ public class PatientSvcImpl implements PatientSvc {
 
     private PatientRepository patientRepository;
 
+    public 
+
     private static final Logger logger = LoggerFactory.getLogger(PatientSvcImpl.class); 
 
     @Override

@@ -18,13 +18,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 public class PatientController {
 
-    private PatientSvc patientSvc;
+    private final PatientSvc patientSvc;
+
+    public PatientController(PatientSvc patientSvc) {
+        this.patientSvc = patientSvc;
+    }
 
 
     @RequestMapping(value="/index.html", method=RequestMethod.GET)
     @ResponseBody
     public String requestMethodName() {
         return "testinggggg ";
+    }
+
+    @RequestMapping(value="", method=RequestMethod.GET)
+    @ResponseBody
+    public String requestMethod() {
+        return "hellloeee ";
     }
 
     @RequestMapping(value = "/{id}", method=RequestMethod.GET, 
