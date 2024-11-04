@@ -2,7 +2,7 @@ package org.healthcare.health.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.healthcare.health.model.Patient;
-import org.healthcare.health.service.PatientSvc;
+import org.healthcare.health.services.patients.PatientSvc;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;

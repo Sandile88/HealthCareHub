@@ -1,4 +1,4 @@
-package org.healthcare.health.service;
+package org.healthcare.health.services.patients;
 
 import org.healthcare.health.model.Patient;
 

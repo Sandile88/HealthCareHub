@@ -3,9 +3,6 @@ package org.healthcare.health.model;
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
 
-// import com.fasterxml.jackson.annotation.JsonFormat;
-// import com.fasterxml.jackson.annotation.JsonProperty;
-
 @Entity
 @Table (name = "patients")
 public class Patient {

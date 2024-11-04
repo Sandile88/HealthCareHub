@@ -1,4 +1,4 @@
-package org.healthcare.health.service;
+package org.healthcare.health.services.patients;
 
 
 import org.slf4j.Logger;
@@ -13,7 +13,9 @@ public class PatientSvcImpl implements PatientSvc {
 
     private PatientRepository patientRepository;
 
-    public 
+    public PatientSvcImpl(PatientRepository patientRepository) {
+        this.patientRepository = patientRepository;
+    }
 
     private static final Logger logger = LoggerFactory.getLogger(PatientSvcImpl.class); 
 
