@@ -1,13 +1,12 @@
 package org.healthcare.health.services.appointments;
 
-import java.time.LocalDateTime;
-
 import org.healthcare.health.model.Appointment;
 
 
 public interface AppointmentSvc {
 
-    // Appointment findByDate(LocalDateTime date);
+    Appointment findById(Long id);
+
 
     Appointment addAppointment(Appointment appointment);
 
