@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 public class PatientSvcImpl implements PatientSvc {
 
     private PatientRepository patientRepository;
+    private static final Logger logger = LoggerFactory.getLogger(PatientSvcImpl.class); 
 
     public PatientSvcImpl(PatientRepository patientRepository) {
         this.patientRepository = patientRepository;
     }
 
-    private static final Logger logger = LoggerFactory.getLogger(PatientSvcImpl.class); 
 
     @Override
     public Patient findByPatientId(Long id) {

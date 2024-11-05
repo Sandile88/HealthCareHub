@@ -22,8 +22,7 @@ public class AppointmentSvcImpl implements AppointmentSvc {
 
     private final AppointmentRepository appointmentRepository;
     private final PatientSvc patientSvc;
-    private PatientController patientController;
-        private static final Logger logger = LoggerFactory.getLogger(PatientSvcImpl.class); 
+    private static final Logger logger = LoggerFactory.getLogger(AppointmentSvcImpl.class); 
 
 
     public AppointmentSvcImpl(AppointmentRepository appointmentRepository, PatientSvc patientSvc) {

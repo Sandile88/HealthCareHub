@@ -3,7 +3,6 @@ package org.healthcare.health.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.healthcare.health.model.Appointment;
-import org.healthcare.health.model.Patient;
 import org.healthcare.health.services.appointments.AppointmentSvc;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RestController

@@ -3,7 +3,6 @@ package org.healthcare.health.model;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
-import org.healthcare.health.model.Patient;
 
 @Entity
 @Table (name = "appointments")
@@ -18,7 +17,6 @@ public class Appointment {
     @JoinColumn(name = "patient_id", referencedColumnName = "id")
     private Patient patient;
 
-
     @Column( name = "provider_name")
     private String providerName;
 
@@ -31,13 +29,11 @@ public class Appointment {
     @Column( name = "status")
     private String status;
 
-    
     @Column( name = "created_at")
     private LocalDateTime createdAt;
 
     @Column( name = "updated_at")
     private LocalDateTime updatedAt;
-
 
     
     public Long getId() {
@@ -92,16 +88,6 @@ public class Appointment {
     public void setStatus(String status) {
         this.status = status;
     }
-
-
-
-
-
-
-
-
-
-
 
     
     public LocalDateTime getCreatedAt() {
