@@ -12,9 +12,9 @@ public interface MedicationSvc {
 
     void deleteMedication(Long id);
 
-    Medication addPescription(Medication medication);
+    Medication addPrescription(Medication medication);
 
-    Medication editPescription(Long id, Medication medication);
+    Medication editPrescription(Long id, Medication medication);
 
     List<Medication> findAllActiveMedicationsByPatientId(Long patientId);
     
