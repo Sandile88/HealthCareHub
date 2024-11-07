@@ -9,8 +9,7 @@ import java.util.Optional;
 
 import org.healthcare.health.model.Doctor;
 import org.healthcare.health.repository.DoctorRepository;
-import org.healthcare.health.repository.MedicationRepository;
-import org.healthcare.health.services.doctors.DoctorSvc;
+
 import org.springframework.stereotype.Service;
 
 @Service
