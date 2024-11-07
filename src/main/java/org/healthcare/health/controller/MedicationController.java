@@ -26,8 +26,7 @@ public class MedicationController {
     // Get Medication by ID
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<Medication> findById(@PathVariable("id") Long id) {
-        Medication medication = medicationSvc.findById(id);
-        return new ResponseEntity<>(medication, HttpStatus.OK);
+        return new ResponseEntity<>(medicationSvc.findById(id), HttpStatus.OK);
     }
 
     // Get All Medications by Patient ID

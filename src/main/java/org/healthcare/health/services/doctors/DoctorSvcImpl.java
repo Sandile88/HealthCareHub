@@ -54,5 +54,16 @@ public class DoctorSvcImpl implements DoctorSvc {
     public List<Doctor> findAllAvailableDoctors() {
        return doctorRepository.findByAcceptingNewPatients(true);
     }
+
+    @Override
+    public void deleteDoctor(Long id) {
+        doctorRepository.delete(findById(id));
+        logger.info("Deleted medication with ID {}", id);
+    }
+
+    @Override
+    public List<Doctor> getAllDoctors() {
+      return doctorRepository.findAllDoctors();
+    }
 }
 

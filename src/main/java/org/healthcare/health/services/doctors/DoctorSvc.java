@@ -14,6 +14,10 @@ public interface DoctorSvc {
 
     Doctor editDoctorDetails(Long id, Doctor doctor);
 
+    void deleteDoctor(Long id);
+
+    List<Doctor> getAllDoctors();
+
     List<Doctor> findAllAvailableDoctors();
 
 
